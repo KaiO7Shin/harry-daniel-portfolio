@@ -7,24 +7,25 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Profil",
   description:
-    "Mon profil sportif : biographie, fiche technique, entraînement et parcours scolaire.",
+    "Profil sportif de Harry Daniel Andriamihaja : biographie, fiche technique, entraînement et parcours scolaire.",
   path: "/profil",
 });
 
 export default function ProfilPage() {
   return (
     <div className="section-space pt-32">
-      <div className="container-main space-y-16">
+      <div className="container-main space-y-20">
         <PlayerCard />
         <TechnicalProfile />
         <ProfileExtras />
-        <div className="flex flex-col gap-4 border border-border bg-black-secondary p-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-xl text-sm text-muted">
-            Clubs, partenaires, médias : parlons de la suite.
+        <div className="flex flex-col gap-5 border border-white-main/10 px-6 py-8 sm:flex-row sm:items-center sm:justify-between md:px-8">
+          <p className="max-w-xl text-sm leading-relaxed text-muted">
+            Pour en savoir plus sur mon parcours ou échanger, le palmarès et le
+            formulaire de contact sont à votre disposition.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button href="/palmares" variant="secondary">
-              Voir mon palmarès
+              Voir le palmarès
             </Button>
             <Button href="/contact">Me contacter</Button>
           </div>

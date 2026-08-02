@@ -16,12 +16,21 @@
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
   --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
-  --container-main: 80rem;
+  --container-main: 76rem;
 }
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
   }
 
   body {
@@ -29,7 +38,7 @@
     color: var(--color-white-main);
     font-family: var(--font-body);
     font-size: 17px;
-    line-height: 1.65;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
@@ -49,8 +58,8 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.03em;
-    line-height: 1.05;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
     font-weight: 700;
   }
 }
@@ -60,7 +69,7 @@
     width: 100%;
     max-width: var(--container-main);
     margin-inline: auto;
-    padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+    padding-inline: clamp(1.25rem, 4vw, 2.75rem);
   }
 
   .text-display {
@@ -72,7 +81,24 @@
   }
 
   .section-space {
-    padding-block: clamp(4.5rem, 10vw, 8rem);
+    padding-block: clamp(5rem, 12vw, 9rem);
+  }
+
+  .section-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--color-yellow);
+  }
+
+  .court-line {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in srgb, var(--color-yellow) 70%, transparent),
+      transparent
+    );
   }
 
   .mg-stripe {
@@ -92,7 +118,7 @@
   .yellow-glow {
     background: radial-gradient(
       circle at center,
-      color-mix(in srgb, var(--color-yellow) 22%, transparent) 0%,
+      color-mix(in srgb, var(--color-yellow) 18%, transparent) 0%,
       transparent 68%
     );
   }
@@ -101,16 +127,30 @@
     background-image:
       linear-gradient(
         to right,
-        color-mix(in srgb, var(--color-border) 45%, transparent) 1px,
+        color-mix(in srgb, var(--color-border) 35%, transparent) 1px,
         transparent 1px
       ),
       linear-gradient(
         to bottom,
-        color-mix(in srgb, var(--color-border) 45%, transparent) 1px,
+        color-mix(in srgb, var(--color-border) 35%, transparent) 1px,
         transparent 1px
       );
-    background-size: 72px 72px;
-    mask-image: radial-gradient(circle at center, black 20%, transparent 75%);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(circle at center, black 15%, transparent 72%);
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-stroke-yellow {
+    -webkit-text-stroke: 1px color-mix(in srgb, var(--color-yellow) 45%, transparent);
+    color: transparent;
   }
 }
 

@@ -19,6 +19,6 @@ export const footerLinks: NavItem[] = [
 ];
 
 export const ctaContact = {
-  label: "Prendre contact",
+  label: "Me contacter",
   href: "/contact",
 } as const;

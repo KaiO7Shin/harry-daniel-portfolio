@@ -32,23 +32,21 @@ export function SectionTitle({
     >
       {eyebrow && (
         <Reveal>
-          <p className="mb-4 text-[12px] uppercase tracking-[0.22em] text-yellow">
-            {eyebrow}
-          </p>
+          <p className="section-eyebrow mb-4">{eyebrow}</p>
         </Reveal>
       )}
       <Reveal delay={0.05}>
         <Heading
           className={cn(
-            "text-balance text-[clamp(2.5rem,5vw,3.75rem)] uppercase",
-            as === "h1" && "text-[clamp(2.75rem,7vw,5.5rem)]",
+            "text-balance text-[clamp(2.25rem,5vw,3.5rem)] uppercase",
+            as === "h1" && "text-[clamp(2.75rem,7vw,5.25rem)]",
           )}
         >
           {title}
         </Heading>
       </Reveal>
       {description && (
-        <Reveal delay={0.12}>
+        <Reveal delay={0.1}>
           <p
             className={cn(
               "mt-5 max-w-2xl text-[17px] leading-relaxed text-muted",

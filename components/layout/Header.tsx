@@ -17,7 +17,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -37,13 +37,13 @@ export function Header() {
   return (
     <>
       <motion.header
-        initial={{ y: -24, opacity: 0 }}
+        initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
-          "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+          "fixed inset-x-0 top-0 z-50 transition-all duration-400",
           scrolled
-            ? "border-b border-border/80 bg-black-main/75 backdrop-blur-xl"
+            ? "border-b border-white-main/10 bg-black-main/80 backdrop-blur-xl"
             : "border-b border-transparent bg-transparent",
         )}
       >
@@ -55,20 +55,20 @@ export function Header() {
         >
           <Link
             href="/"
-            className="group flex items-center gap-2"
+            className="group flex items-center gap-2.5"
             aria-label={`${player.displayName} — Accueil`}
           >
-            <span className="text-display text-lg font-bold tracking-[0.08em]">
+            <span className="text-display text-lg font-bold tracking-[0.12em]">
               {player.monogram}
             </span>
-            <span className="size-1.5 rounded-full bg-yellow transition-transform group-hover:scale-125" />
-            <span className="hidden text-[11px] uppercase tracking-[0.22em] text-muted sm:inline">
+            <span className="size-1.5 rounded-full bg-yellow transition-transform duration-300 group-hover:scale-150" />
+            <span className="hidden text-[11px] uppercase tracking-[0.24em] text-muted sm:inline">
               Harry Daniel
             </span>
           </Link>
 
           <nav
-            className="hidden items-center gap-1 xl:flex"
+            className="hidden items-center gap-0.5 xl:flex"
             aria-label="Navigation principale"
           >
             {navigation.map((item) => {
@@ -82,7 +82,7 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "relative px-3 py-2 text-[13px] tracking-wide text-muted transition-colors hover:text-white-main",
+                    "relative px-3.5 py-2 text-[13px] tracking-wide text-muted transition-colors hover:text-white-main",
                     active && "text-white-main",
                   )}
                 >
@@ -90,7 +90,7 @@ export function Header() {
                   {active && (
                     <motion.span
                       layoutId="nav-underline"
-                      className="absolute inset-x-3 -bottom-0.5 h-px bg-yellow"
+                      className="absolute inset-x-3.5 -bottom-0.5 h-px bg-yellow"
                     />
                   )}
                 </Link>
@@ -107,7 +107,7 @@ export function Header() {
 
             <button
               type="button"
-              className="inline-flex size-11 items-center justify-center rounded-sm border border-border text-white-main xl:hidden"
+              className="inline-flex size-11 items-center justify-center border border-white-main/20 text-white-main xl:hidden"
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
@@ -116,9 +116,9 @@ export function Header() {
               <AnimatePresence mode="wait" initial={false}>
                 <motion.span
                   key={open ? "close" : "open"}
-                  initial={{ opacity: 0, rotate: -45 }}
+                  initial={{ opacity: 0, rotate: -40 }}
                   animate={{ opacity: 1, rotate: 0 }}
-                  exit={{ opacity: 0, rotate: 45 }}
+                  exit={{ opacity: 0, rotate: 40 }}
                   transition={{ duration: 0.2 }}
                 >
                   {open ? <X className="size-5" /> : <Menu className="size-5" />}

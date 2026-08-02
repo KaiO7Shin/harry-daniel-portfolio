@@ -5,7 +5,7 @@ import { getSiteUrl } from "@/lib/site-url";
 export const siteConfig = {
   name: `${player.displayName} — Joueur national de tennis de table`,
   description:
-    "Portfolio officiel de Harry Daniel Andriamihaja, joueur national malagasy de tennis de table, membre de l’équipe nationale de Madagascar depuis 2024.",
+    "Présentation de Harry Daniel Andriamihaja, joueur national malagasy de tennis de table — parcours, palmarès et galerie.",
   url: getSiteUrl(),
   locale: "fr_MG",
   keywords: [

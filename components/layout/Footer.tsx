@@ -8,33 +8,31 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-black-secondary">
+    <footer className="border-t border-white-main/10 bg-black-secondary">
       <div className="mg-stripe" />
       <div className="container-main section-space !py-16">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr_1fr]">
+        <div className="grid gap-14 lg:grid-cols-[1.3fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-2">
-              <span className="text-display text-2xl font-bold tracking-[0.08em]">
+            <div className="flex items-center gap-2.5">
+              <span className="text-display text-2xl font-bold tracking-[0.12em]">
                 {player.monogram}
               </span>
               <span className="size-1.5 rounded-full bg-yellow" />
             </div>
-            <p className="mt-4 text-display text-xl font-semibold">
+            <p className="mt-5 text-display text-xl font-semibold uppercase tracking-wide">
               {player.displayName}
             </p>
-            <p className="mt-2 flex flex-wrap items-center gap-2 text-sm text-muted">
+            <p className="mt-3 flex flex-wrap items-center gap-2 text-sm text-muted">
               Joueur national de tennis de table — {player.country}
               <MadagascarFlag />
             </p>
-            <p className="mt-6 max-w-sm text-sm italic text-white-main/80">
+            <p className="mt-7 max-w-sm border-l border-yellow/50 pl-4 text-sm italic text-white-main/75">
               “{player.quote}”
             </p>
           </div>
 
           <div>
-            <p className="mb-4 text-[12px] uppercase tracking-[0.2em] text-yellow">
-              Navigation
-            </p>
+            <p className="section-eyebrow mb-5">Navigation</p>
             <ul className="space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.href}>
@@ -50,9 +48,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="mb-4 text-[12px] uppercase tracking-[0.2em] text-yellow">
-              Contact
-            </p>
+            <p className="section-eyebrow mb-5">Contact</p>
             <p className="text-sm text-muted">{player.contact.location}</p>
             <a
               href={`mailto:${player.contact.email}`}
@@ -66,11 +62,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-border pt-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-3 border-t border-white-main/10 pt-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {player.displayName}. Tous droits réservés.
           </p>
-          <p>Portfolio sportif officiel — Madagascar</p>
+          <p>Portfolio sportif — Madagascar</p>
         </div>
       </div>
     </footer>

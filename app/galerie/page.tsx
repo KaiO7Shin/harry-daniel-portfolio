@@ -5,7 +5,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Galerie",
   description:
-    "Galerie photos de Harry Daniel Andriamihaja : portraits, matchs, entraînements, compétitions, équipe nationale et podiums.",
+    "Galerie photos de Harry Daniel Andriamihaja : portraits, matchs, compétitions, équipe nationale et podiums.",
   path: "/galerie",
 });
 
@@ -17,7 +17,7 @@ export default function GaleriePage() {
           as="h1"
           eyebrow="Visuels"
           title="Galerie"
-          description="Portraits, matchs, entraînements et compétitions — une sélection d’images de mon parcours."
+          description="Une sélection d’images de mon parcours — matchs, compétitions et moments d’équipe."
           className="mb-12"
         />
         <GalleryGrid />

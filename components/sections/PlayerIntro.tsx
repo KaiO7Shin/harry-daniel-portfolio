@@ -1,8 +1,9 @@
+"use client";
+
 import { player } from "@/data/player";
 import { Button } from "@/components/ui/Button";
 import { ImageReveal } from "@/components/ui/ImageReveal";
 import { Reveal } from "@/components/ui/Reveal";
-import { SectionTitle } from "@/components/ui/SectionTitle";
 
 const techFacts = [
   { label: "Main dominante", value: player.dominantHand },
@@ -16,41 +17,47 @@ const techFacts = [
 export function PlayerIntro() {
   return (
     <section className="section-space">
-      <div className="container-main grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+      <div className="container-main grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
         <ImageReveal
           src={player.images.profileAction}
           alt={`${player.displayName} en maillot de l’équipe nationale`}
-          className="aspect-[4/5] w-full max-w-md lg:max-w-none"
-          imageClassName="object-cover object-[62%_16%]"
+          className="aspect-[4/5] w-full max-w-md border border-white-main/10 lg:max-w-none"
+          imageClassName="object-cover object-[62%_16%] transition-transform duration-700 hover:scale-[1.03]"
           sizes="(max-width: 1024px) 90vw, 480px"
         />
 
         <div>
-          <SectionTitle title={player.introTitle} />
-          <Reveal delay={0.1}>
-            <p className="mt-6 max-w-2xl text-[17px] leading-relaxed text-muted">
+          <Reveal>
+            <p className="section-eyebrow mb-4">Profil de jeu</p>
+            <h2 className="max-w-xl text-[clamp(2rem,4.5vw,3.4rem)] uppercase">
+              {player.introTitle}
+            </h2>
+          </Reveal>
+
+          <Reveal delay={0.08}>
+            <p className="mt-7 max-w-xl text-[17px] leading-relaxed text-muted">
               {player.introText}
             </p>
           </Reveal>
 
-          <Reveal delay={0.18}>
-            <dl className="mt-8 grid gap-3 sm:grid-cols-2">
+          <Reveal delay={0.14}>
+            <dl className="mt-10 grid gap-0 border-t border-white-main/10 sm:grid-cols-2">
               {techFacts.map((fact) => (
                 <div
                   key={fact.label}
-                  className="border border-border bg-black-secondary px-4 py-3"
+                  className="border-b border-white-main/10 px-0 py-4 sm:pr-6"
                 >
-                  <dt className="text-[11px] uppercase tracking-[0.16em] text-muted">
+                  <dt className="text-[11px] uppercase tracking-[0.18em] text-muted">
                     {fact.label}
                   </dt>
-                  <dd className="mt-1 text-sm text-white-main">{fact.value}</dd>
+                  <dd className="mt-1.5 text-sm text-white-main">{fact.value}</dd>
                 </div>
               ))}
             </dl>
           </Reveal>
 
-          <Reveal delay={0.24} className="mt-8">
-            <Button href="/profil">Voir mon profil complet</Button>
+          <Reveal delay={0.2} className="mt-10">
+            <Button href="/profil">Voir le profil</Button>
           </Reveal>
         </div>
       </div>

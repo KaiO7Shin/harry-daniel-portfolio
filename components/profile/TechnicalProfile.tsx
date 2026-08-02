@@ -24,16 +24,17 @@ export function TechnicalProfile() {
   return (
     <section>
       <Reveal>
+        <p className="section-eyebrow mb-4">Données</p>
         <h2 className="mb-8 text-[clamp(2rem,4vw,2.75rem)] uppercase">
           Fiche technique
         </h2>
       </Reveal>
       <Reveal delay={0.08}>
-        <dl className="grid gap-3 sm:grid-cols-2">
+        <dl className="grid gap-0 border-t border-white-main/10 sm:grid-cols-2">
           {fields.map((field) => (
             <div
               key={field.label}
-              className="border border-border bg-black-secondary px-5 py-4"
+              className="border-b border-white-main/10 px-0 py-4 sm:pr-8"
             >
               <dt className="text-[11px] uppercase tracking-[0.16em] text-muted">
                 {field.label}

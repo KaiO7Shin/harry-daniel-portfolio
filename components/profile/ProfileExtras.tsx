@@ -6,7 +6,7 @@ export function ProfileExtras() {
   return (
     <section className="grid gap-6 lg:grid-cols-2">
       <Reveal>
-        <div className="h-full border border-border bg-anthracite p-6 md:p-8">
+        <div className="h-full border border-white-main/10 bg-black-secondary/40 p-6 md:p-8">
           <h2 className="text-[clamp(1.5rem,3vw,2rem)] uppercase">
             Entraînement & scolarité
           </h2>
@@ -36,7 +36,7 @@ export function ProfileExtras() {
       </Reveal>
 
       <Reveal delay={0.08}>
-        <div className="h-full border border-border bg-black-secondary p-6 md:p-8">
+        <div className="h-full border border-white-main/10 bg-black-main/20 p-6 md:p-8">
           <h2 className="text-[clamp(1.5rem,3vw,2rem)] uppercase">
             Qualités & centres d’intérêt
           </h2>

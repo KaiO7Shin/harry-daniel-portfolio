@@ -84,6 +84,6 @@ export const partnerVisibility = [
 ] as const;
 
 export const partnershipCTA = {
-  title: "Construisons la prochaine étape ensemble.",
-  text: "Je recherche des opportunités sportives, des stages internationaux, un accompagnement matériel et des partenaires souhaitant soutenir le développement d’un jeune talent malagasy.",
+  title: "La suite du parcours.",
+  text: "Stages, compétitions internationales et environnement de haut niveau font partie de mes objectifs sportifs.",
 } as const;
