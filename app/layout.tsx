@@ -34,11 +34,20 @@ export const metadata: Metadata = {
     siteName: "Harry Daniel Andriamihaja",
     locale: siteConfig.locale,
     type: "website",
+    images: [
+      {
+        url: "/images/harry/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Harry Daniel Andriamihaja",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
+    images: ["/images/harry/og.jpg"],
   },
   robots: {
     index: true,

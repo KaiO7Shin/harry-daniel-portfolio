@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import { player } from "@/data/player";
-
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://harrydaniel-tt.mg";
+import { getSiteUrl } from "@/lib/site-url";
 
 export const siteConfig = {
   name: `${player.displayName} — Joueur national de tennis de table`,
   description:
     "Portfolio officiel de Harry Daniel Andriamihaja, joueur national malagasy de tennis de table, membre de l’équipe nationale de Madagascar depuis 2024.",
-  url: siteUrl,
+  url: getSiteUrl(),
   locale: "fr_MG",
   keywords: [
     "Harry Daniel Andriamihaja",

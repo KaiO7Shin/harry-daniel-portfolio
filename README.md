@@ -25,6 +25,25 @@ npm run build
 npm start
 ```
 
+## Déploiement Vercel
+
+Le projet est prêt pour Vercel (Next.js App Router, build statique OK).
+
+1. Va sur [vercel.com/new](https://vercel.com/new)
+2. Importe le repo `KaiO7Shin/harry-daniel-portfolio`
+3. Framework : **Next.js** (détecté automatiquement)
+4. Ajoute les variables d’environnement (Settings → Environment Variables) :
+
+| Variable | Exemple | Obligatoire |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | `https://ton-projet.vercel.app` | Recommandé (SEO / Open Graph) |
+| `NEXT_PUBLIC_FORMSPREE_ENDPOINT` | `https://formspree.io/f/xxxxxxxx` | Optionnel (envoi du contact) |
+
+5. Deploy → tu obtiens une URL `*.vercel.app`
+6. (Optionnel) Domaine custom dans Project → Settings → Domains
+
+Sans Formspree, le site s’affiche correctement ; seul l’envoi du formulaire reste inactif.
+
 ## Structure des pages
 
 | Route | Rôle |
@@ -95,15 +114,13 @@ Variables définies dans `app/globals.css` (`@theme`) :
 
 ## Formulaire de contact
 
-Le formulaire valide côté client mais **n’envoie rien** tant qu’aucun backend n’est branché.
+1. Créer un formulaire gratuit sur [Formspree](https://formspree.io)
+2. Copier l’endpoint `https://formspree.io/f/xxxxxxxx`
+3. Le définir dans `.env.local` (local) et sur Vercel (`NEXT_PUBLIC_FORMSPREE_ENDPOINT`)
 
-Pour la production, connecter par exemple :
+Mettre à jour l’e-mail affiché dans `data/player.ts` → `contact.email`.
 
-- Formspree
-- Resend
-- une route API Next.js (`app/api/contact/route.ts`)
-
-Mettre à jour l’e-mail professionnel dans `data/player.ts` → `contact.email`.
+Copier aussi `.env.example` → `.env.local` pour le développement.
 
 ## Version anglaise (future)
 

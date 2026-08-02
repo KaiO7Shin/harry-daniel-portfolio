@@ -1,0 +1,4 @@
+# Réduit la taille d’upload Vercel (inutile en production)
+scripts/
+public/images/harry/source/
+public/images/source/
