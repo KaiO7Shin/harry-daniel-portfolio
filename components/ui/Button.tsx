@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { Magnetic } from "@/components/ui/Magnetic";
 import type { ReactNode } from "react";
 
 type ButtonVariant = "primary" | "secondary" | "ghost";
@@ -33,15 +33,15 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-yellow text-black-main hover:bg-yellow-hover shadow-[0_0_0_0_rgba(244,196,48,0)] hover:shadow-[0_10px_30px_-12px_rgba(244,196,48,0.55)]",
+    "bg-yellow text-black-main hover:bg-yellow-hover",
   secondary:
-    "bg-transparent text-white-main border border-border hover:border-yellow hover:text-yellow",
+    "bg-transparent text-white-main border border-white-main/25 hover:border-yellow hover:text-yellow",
   ghost: "bg-transparent text-muted hover:text-yellow px-0",
 };
 
 const sizes: Record<ButtonSize, string> = {
   md: "min-h-11 px-5 text-sm",
-  lg: "min-h-12 px-6 text-[15px]",
+  lg: "min-h-12 px-7 text-[15px]",
 };
 
 export function Button(props: ButtonProps) {
@@ -55,7 +55,7 @@ export function Button(props: ButtonProps) {
   } = props;
 
   const classes = cn(
-    "group inline-flex items-center justify-center gap-2 rounded-sm font-medium tracking-wide transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none",
+    "group inline-flex items-center justify-center gap-2 rounded-none font-medium tracking-wide transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none",
     variants[variant],
     variant !== "ghost" && sizes[size],
     className,
@@ -76,7 +76,7 @@ export function Button(props: ButtonProps) {
 
   if ("href" in props && props.href) {
     return (
-      <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+      <Magnetic strength={0.22}>
         <Link
           href={props.href}
           className={classes}
@@ -85,14 +85,14 @@ export function Button(props: ButtonProps) {
         >
           {content}
         </Link>
-      </motion.div>
+      </Magnetic>
     );
   }
 
   const buttonProps = props as ButtonAsButton;
 
   return (
-    <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+    <Magnetic strength={0.18}>
       <button
         type={buttonProps.type ?? "button"}
         className={classes}
@@ -102,6 +102,6 @@ export function Button(props: ButtonProps) {
       >
         {content}
       </button>
-    </motion.div>
+    </Magnetic>
   );
 }

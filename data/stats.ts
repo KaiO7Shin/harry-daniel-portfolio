@@ -40,4 +40,4 @@ export const keyStats: StatItem[] = [
 ];
 
 export const statsNote =
-  "Données sportives à mettre à jour selon les classements officiels.";
+  "Repères sportifs — classements et participations à jour selon les sources officielles.";

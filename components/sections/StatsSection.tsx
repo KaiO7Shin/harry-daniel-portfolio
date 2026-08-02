@@ -6,26 +6,31 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export function StatsSection() {
   return (
-    <section className="section-space border-y border-border bg-black-secondary">
-      <div className="container-main">
+    <section className="relative border-y border-white-main/10 bg-black-secondary">
+      <div className="court-line absolute inset-x-0 top-0" aria-hidden />
+      <div className="container-main section-space !py-16 md:!py-20">
         <Reveal>
-          <p className="mb-10 text-[12px] uppercase tracking-[0.22em] text-yellow">
-            Chiffres clés
-          </p>
+          <p className="section-eyebrow mb-10">Repères</p>
         </Reveal>
 
-        <Stagger className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
-          {keyStats.map((stat) => (
+        <Stagger className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-3 lg:grid-cols-5 lg:gap-x-8">
+          {keyStats.map((stat, index) => (
             <StaggerItem key={stat.id}>
-              <article className="group h-full border border-border bg-anthracite/70 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-yellow/50">
+              <article className="group relative">
+                <span
+                  className="mb-3 block text-[11px] tracking-[0.2em] text-muted/70"
+                  aria-hidden
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
                 <AnimatedCounter
                   value={stat.value}
                   prefix={stat.prefix}
                   suffix={stat.suffix}
                   displayOverride={stat.displayOverride}
-                  className="text-display block text-[clamp(2rem,4vw,3rem)] font-bold text-yellow"
+                  className="text-display block text-[clamp(2.25rem,4.5vw,3.4rem)] font-bold text-yellow transition-transform duration-300 group-hover:-translate-y-0.5"
                 />
-                <p className="mt-3 text-sm leading-snug text-muted">
+                <p className="mt-3 max-w-[12rem] text-sm leading-snug text-muted">
                   {stat.label}
                 </p>
               </article>
@@ -33,8 +38,8 @@ export function StatsSection() {
           ))}
         </Stagger>
 
-        <Reveal delay={0.15}>
-          <p className="mt-8 text-xs text-muted/80">{statsNote}</p>
+        <Reveal delay={0.12}>
+          <p className="mt-12 text-xs text-muted/70">{statsNote}</p>
         </Reveal>
       </div>
     </section>

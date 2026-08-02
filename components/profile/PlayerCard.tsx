@@ -10,7 +10,7 @@ export function PlayerCard() {
       <ImageReveal
         src={player.images.portrait}
         alt={`Portrait de ${player.displayName} en maillot de l’équipe nationale de Madagascar`}
-        className="aspect-[4/5] w-full"
+        className="aspect-[4/5] w-full border border-white-main/10"
         imageClassName="object-cover object-[62%_16%]"
         sizes="(max-width: 1024px) 90vw, 420px"
         priority
@@ -18,7 +18,7 @@ export function PlayerCard() {
 
       <div>
         <Reveal>
-          <p className="mb-4 inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.22em] text-yellow">
+          <p className="section-eyebrow mb-4 inline-flex items-center gap-2">
             Profil sportif <MadagascarFlag />
           </p>
         </Reveal>

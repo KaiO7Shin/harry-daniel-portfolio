@@ -24,7 +24,7 @@ export function CareerPreview({ embedded = false }: CareerPreviewProps) {
         <SectionTitle
           eyebrow="Parcours"
           title="Les étapes clés"
-          description="Des clubs de formation à l’équipe nationale et aux compétitions africaines."
+          description="Des clubs de formation à l’équipe nationale, jusqu’aux compétitions africaines."
         />
 
         <div className="relative mt-12">
@@ -48,7 +48,7 @@ export function CareerPreview({ embedded = false }: CareerPreviewProps) {
                       {step.period}
                     </p>
                   </div>
-                  <div className="border border-border bg-black-secondary px-5 py-4 md:px-6 md:py-5">
+                  <div className="border border-white-main/10 bg-black-main/30 px-5 py-4 transition-colors hover:border-yellow/35 md:px-6 md:py-5">
                     <h3 className="text-display text-lg uppercase">
                       {step.title}
                     </h3>

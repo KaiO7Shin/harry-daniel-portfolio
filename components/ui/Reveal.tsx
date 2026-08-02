@@ -32,7 +32,7 @@ export function Reveal({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, amount: 0.12, margin: "0px 0px -5% 0px" }}
+      viewport={{ once, amount: 0.18, margin: "0px 0px -8% 0px" }}
       variants={reduceMotion ? reducedMotionVariants : variants}
       transition={reduceMotion ? { duration: 0.2 } : { delay }}
     >
@@ -55,7 +55,7 @@ export function Stagger({
       className={cn(className)}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.08, margin: "0px 0px -5% 0px" }}
+      viewport={{ once: true, amount: 0.12, margin: "0px 0px -6% 0px" }}
       variants={reduceMotion ? undefined : staggerContainer}
     >
       {children}

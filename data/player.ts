@@ -28,26 +28,26 @@ export const player = {
   school: "École Sacré-Cœur Antanimena",
   educationLevel: "Terminale scientifique",
   educationProject:
-    "Je vise à évoluer comme joueur professionnel ou semi-professionnel, tout en développant d’autres activités.",
+    "Je poursuis une Terminale scientifique tout en construisant mon parcours de joueur, avec l’objectif d’évoluer un jour au niveau professionnel ou semi-professionnel.",
   languages: ["Malagasy", "Français", "Anglais", "Notions d’allemand"],
   interests: ["Trail", "VTT", "Formule 1", "MotoGP", "Athlétisme", "Mangas"],
   training: {
     schoolPeriod: "Environ 4 heures par semaine",
     holidays: "Environ 7 heures par semaine",
-    goal: "J’aimerais augmenter progressivement le volume et l’intensité.",
+    goal: "Je cherche à augmenter progressivement le volume et l’intensité de mon entraînement.",
   },
   quote: "Discipline aujourd’hui, excellence demain.",
-  heroLabel: "Joueur international • Madagascar",
-  heroSubtitle: "Joueur national de tennis de table",
+  heroLabel: "Joueur national • Madagascar",
+  heroSubtitle: "Tennis de table",
   heroDescription:
-    "Je suis un gaucher offensif, membre de l’équipe nationale de Madagascar, engagé dans une progression vers le haut niveau africain et international.",
-  introTitle: "Un jeu offensif. Une ambition internationale.",
+    "Gaucher offensif, membre de l’équipe nationale de Madagascar. Voici mon parcours, mon jeu et mes compétitions.",
+  introTitle: "Un jeu offensif, précis et construit.",
   introText:
-    "Je suis un joueur malagasy de tennis de table évoluant en catégorie junior et en première série nationale A. Gaucher avec une prise orthodoxe, je développe un jeu offensif basé sur mon coup droit, la variation des effets et la précision de mes placements.",
+    "Je suis un joueur malagasy de tennis de table, en catégorie junior et en première série nationale A. Gaucher à la prise orthodoxe, je m’appuie sur mon coup droit, la variation des effets et la précision des placements.",
   biography: [
-    "J’ai découvert le tennis de table à l’âge de huit ans. Après mes débuts au CFTT, j’ai poursuivi ma formation au club Jovenna, où j’ai progressivement développé mon expérience dans les compétitions régionales et nationales. Mes résultats et ma régularité m’ont permis d’intégrer l’équipe nationale de Madagascar en 2024.",
-    "Gaucher au profil offensif, je construis principalement mon jeu autour du coup droit, de la variation des effets et de la précision des placements. Depuis 2026, j’évolue au sein du club Young Vibes sous la direction de Narcisse Ranarison.",
-    "Mon ambition est de progresser au niveau continental, de multiplier les expériences ITTF et de rejoindre à terme un environnement sportif international.",
+    "J’ai découvert le tennis de table à huit ans. Après mes débuts au CFTT, j’ai poursuivi ma formation au club Jovenna, en enchaînant compétitions régionales et nationales. En 2024, j’ai intégré l’équipe nationale de Madagascar.",
+    "Gaucher au profil offensif, je construis mon jeu autour du coup droit, des effets et des placements. Depuis 2026, j’évolue au club Young Vibes avec Narcisse Ranarison.",
+    "Je vise à progresser au niveau continental, à multiplier les expériences ITTF et, à terme, à évoluer dans un environnement sportif international.",
   ],
   badges: [
     "Équipe nationale depuis 2024",
@@ -58,7 +58,7 @@ export const player = {
   contact: {
     email: "contact@harrydaniel-tt.mg",
     location: "Madagascar",
-    note: "Pour toute opportunité sportive, proposition de club, partenariat, sponsoring, interview ou demande d’information, n’hésitez pas à me contacter.",
+    note: "Pour une question, une interview ou un échange autour de mon parcours, vous pouvez m’écrire.",
   },
   socials: [
     {

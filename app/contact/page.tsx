@@ -7,26 +7,24 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Contact",
   description:
-    "Contacter Harry Daniel Andriamihaja pour une opportunité sportive, un partenariat, un sponsoring ou une demande média.",
+    "Contacter Harry Daniel Andriamihaja pour une question, une interview ou un échange autour de son parcours.",
   path: "/contact",
 });
 
 export default function ContactPage() {
   return (
     <div className="section-space pt-32">
-      <div className="container-main grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="container-main grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div>
-          <p className="mb-4 text-[12px] uppercase tracking-[0.22em] text-yellow">
-            Contact
-          </p>
+          <p className="section-eyebrow mb-4">Contact</p>
           <h1 className="text-[clamp(2.75rem,6vw,4.5rem)] uppercase">
-            Entrons en contact
+            Écrivons-nous
           </h1>
           <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-muted">
             {player.contact.note}
           </p>
 
-          <div className="mt-10 space-y-4 border border-border bg-black-secondary p-6">
+          <div className="mt-10 space-y-4 border border-white-main/10 px-6 py-7">
             <p className="flex items-center gap-2 text-sm text-white-main">
               {player.contact.location} <MadagascarFlag />
             </p>
@@ -44,7 +42,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="border border-border bg-anthracite p-6 md:p-8">
+        <div className="border border-white-main/10 bg-black-secondary/50 p-6 md:p-8">
           <ContactForm />
         </div>
       </div>
